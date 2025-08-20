@@ -36,18 +36,16 @@ function DraggableTask({
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
-      // Add end callback to ensure proper cleanup
+
       end: (item, monitor) => {
         if (!monitor.didDrop()) {
-          // Handle case where drop was cancelled
           console.log("Drop was cancelled");
         }
       },
     }),
     [todo._id, todo.status]
-  ); // Add dependencies
+  );
 
-  // Connect the drag source to the ref
   drag(ref);
 
   return (
@@ -101,7 +99,6 @@ function DroppableColumn({
     () => ({
       accept: ItemTypes.TASK,
       drop: (item: { id: string; status: string }, monitor) => {
-        // Only handle the drop if it's not already in this column
         if (item.status !== status && monitor.didDrop() === false) {
           onDrop(item.id, status);
           return { moved: true };
@@ -109,7 +106,6 @@ function DroppableColumn({
         return undefined;
       },
       canDrop: (item: { id: string; status: string }) => {
-        // Allow drop if item is from a different status
         return item.status !== status;
       },
       collect: (monitor) => ({
@@ -118,9 +114,8 @@ function DroppableColumn({
       }),
     }),
     [status, onDrop]
-  ); // Add dependencies
+  );
 
-  // Connect the drop target to the ref
   drop(ref);
 
   return (
