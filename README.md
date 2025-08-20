@@ -1,8 +1,66 @@
-This is a [Next.js](https:
+# TODO Master
+
+A modern, feature-rich Todo application built with Next.js 15, React 19, and TypeScript. This application provides a clean and intuitive interface for managing your tasks with advanced features like drag-and-drop functionality and user authentication.
+
+## Features
+
+- ✅ **Todo Management**: Create, edit, delete, and organize your todos
+- 🔐 **User Authentication**: Secure login and signup with JWT tokens
+- 🎯 **Drag & Drop**: Intuitive task reordering with react-dnd
+- 📱 **Responsive Design**: Beautiful UI with Tailwind CSS
+- 🚀 **Modern Stack**: Built with Next.js 15 and React 19
+- 📊 **Database**: MongoDB
+
+## Tech Stack
+
+- **Framework**: Next.js 15.5.0 with Turbopack
+- **Frontend**: React 19.1.0, TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **Database**: MongoDB with Mongoose 8.17.2
+- **Authentication**: JSON Web Tokens (JWT)
+- **Password Security**: bcryptjs for hashing
+- **Drag & Drop**: react-dnd with HTML5 backend
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- npm, yarn, pnpm, or bun
+- MongoDB database
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd itask
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+NEXTAUTH_SECRET=your_nextauth_secret
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +72,60 @@ pnpm dev
 bun dev
 ```
 
-Open [http:
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https:
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build the application for production with Turbopack
+- `npm run start` - Start the production server
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+itask/
+├── src/
+│   ├── app/
+│   │   ├── signup/          # User registration page
+│   │   └── ...              # Other app routes
+│   ├── components/          # Reusable React components
+│   ├── lib/                 # Utility functions and configurations
+│   └── types/               # TypeScript type definitions
+├── public/                  # Static assets
+├── package.json
+└── README.md
+```
 
-- [Next.js Documentation](https:
-- [Learn Next.js](https:
+## Key Dependencies
 
-You can check out [the Next.js GitHub repository](https:
+### Production Dependencies
 
-## Deploy on Vercel
+- **next**: React framework for production
+- **react & react-dom**: Core React libraries
+- **mongoose**: MongoDB object modeling
+- **jsonwebtoken**: JWT implementation
+- **bcryptjs**: Password hashing library
+- **react-dnd**: Drag and drop functionality
+- **lucide-react**: Beautiful icon library
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https:
+### Development Dependencies
 
-Check out our [Next.js deployment documentation](https:
+- **typescript**: Type safety
+- **tailwindcss**: Utility-first CSS framework
+- **@types/**: TypeScript definitions
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Support
+
+If you encounter any issues or have questions, please create an issue in the repository.
+
+---
+
+**TODO Master** - Organize your life, one task at a time! 🚀
